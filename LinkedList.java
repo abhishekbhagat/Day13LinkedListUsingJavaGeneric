@@ -15,13 +15,13 @@ public class LinkedList<T> {
 	 * @param data
 	 */
 	public void insert(T data) {
-		Node<T> newnode = new Node<T>(data);
+		Node<T> newNode = new Node<T>(data);
 		if (head == null && tail == null) {
-			head = newnode;
-			tail = newnode;
+			head = newNode;
+			tail = newNode;
 		} else {
-			newnode.setNext(head);
-			head = newnode;
+			newNode.setNext(head);
+			head = newNode;
 		}
 	}
 
@@ -31,13 +31,29 @@ public class LinkedList<T> {
 	 * @param data
 	 */
 	public void add(T data) {
-		Node<T> newnode = new Node<T>(data);
+		Node<T> newNode = new Node<T>(data);
 		if (head == null && tail == null) {
-			head = newnode;
-			tail = newnode;
+			head = newNode;
+			tail = newNode;
 		} else {
-			newnode.setNext(head);
-			head = newnode;
+			newNode.setNext(head);
+			head = newNode;
+		}
+	}
+
+	/**
+	 * uc3
+	 * 
+	 * @param data
+	 */
+	public void append(T data) {
+		Node<T> newNode = new Node<T>(data);
+		if (head == null && tail == null) {
+			head = newNode;
+			tail = newNode;
+		} else {
+			tail.setNext(newNode);
+			tail = newNode;
 		}
 	}
 
