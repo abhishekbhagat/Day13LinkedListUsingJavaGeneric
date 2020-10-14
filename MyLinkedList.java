@@ -7,6 +7,7 @@ public class MyLinkedList {
 		linkedList.append(a);
 		linkedList.append(c);
 		linkedList.insertNumberAfterGivenNodeKey(b, a);
+		linkedList.deleteSelectedNode(b);
 		linkedList.show();
 	}
 }

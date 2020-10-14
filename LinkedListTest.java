@@ -23,4 +23,14 @@ public class LinkedListTest {
 		linkedList.insertNumberAfterGivenNodeKey(b, a);
 		Assert.assertEquals(true,linkedList.findNodeWithValue(b));
 	}
+	@Test
+	public void givenLinkedListDeleteGivenNode_ShouldPassLinkedResult() {
+		LinkedList<Integer> linkedList = new LinkedList<Integer>();
+		Integer a = 56, b = 30, c = 70;
+		linkedList.append(a);
+		linkedList.append(c);
+		linkedList.insertNumberAfterGivenNodeKey(b, a);
+		linkedList.deleteSelectedNode(b);
+		Assert.assertEquals(false,linkedList.findNodeWithValue(b));
+	}
 }

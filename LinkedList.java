@@ -1,4 +1,5 @@
 package com.bridgelabz.problemday13;
+
 public class LinkedList<T> {
 	Node<T> head;
 	Node<T> tail;
@@ -111,6 +112,11 @@ public class LinkedList<T> {
 		}
 		return false;
 	}
+	/**
+	 * uc8
+	 * @param newKey
+	 * @param key
+	 */
 	public void insertNumberAfterGivenNodeKey(T newKey, T key) {
 		Node<T> node = head;
 		Node<T> temp;
@@ -123,6 +129,28 @@ public class LinkedList<T> {
 		temp = node.getNext();
 		node.setNext(newnode);
 		newnode.setNext(temp);
+	}
+	/**
+	 * uc9
+	 * @param key
+	 */
+	public void deleteSelectedNode(T key) {
+		Node<T> node=head;
+		Node<T> prevNode=null;
+		while(node!=null) {
+			if(node.getData()==key)
+				break;
+			prevNode=node;
+			node=node.getNext();
+		}
+		if(prevNode==null) {
+			head=head.getNext();
+		}
+		else
+		{
+		    prevNode.setNext(node.getNext());
+		    node.setNext(null);
+		}
 	}
 	public void show() {
 		Node<T> node = head;
