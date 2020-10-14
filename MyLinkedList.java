@@ -3,10 +3,11 @@ package com.bridgelabz.problemday13;
 public class MyLinkedList {
 	public static <T> void main(String[] args) {
 		LinkedList<Integer> linkedList = new LinkedList<Integer>();
-		Integer a = 70,b=30,c = 56;
+		Integer a = 56, b = 30, c = 70;
 		linkedList.append(a);
 		linkedList.append(c);
-		linkedList.insertNumberAfterGivenNumber(b,c);
+		linkedList.insertNumberAfterGivenNumber(b, a);
+		linkedList.pop();
 		linkedList.show();
 	}
 }
