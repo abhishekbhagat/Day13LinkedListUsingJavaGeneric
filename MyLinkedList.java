@@ -6,8 +6,7 @@ public class MyLinkedList {
 		Integer a = 56, b = 30, c = 70;
 		linkedList.append(a);
 		linkedList.append(c);
-		linkedList.insertNumberAfterGivenNumber(b, a);
+		linkedList.insertNumberAfterGivenNodeKey(b, a);
 		linkedList.show();
-		linkedList.findNodeWithValue(b);
 	}
 }

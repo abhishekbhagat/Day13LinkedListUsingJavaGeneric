@@ -111,6 +111,19 @@ public class LinkedList<T> {
 		}
 		return false;
 	}
+	public void insertNumberAfterGivenNodeKey(T newKey, T key) {
+		Node<T> node = head;
+		Node<T> temp;
+		Node<T> newnode = new Node<T>(newKey);
+		while (node != null) {
+			if (node.getData() == key)
+				break;
+			node = node.getNext();
+		}
+		temp = node.getNext();
+		node.setNext(newnode);
+		newnode.setNext(temp);
+	}
 	public void show() {
 		Node<T> node = head;
 		while (node != null) {
