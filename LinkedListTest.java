@@ -7,7 +7,7 @@ public class LinkedListTest {
 
 	@Test
 	public void givenLinkedListWhenFindNodeOfGivenValue_ShouldReturnTrue() {
-		LinkedList<Integer> linkedList = new LinkedList<Integer>();
+		SortedLinkedList<Integer> linkedList = new SortedLinkedList<Integer>();
 		Integer a = 56, b = 30, c = 70;
 		linkedList.append(a);
 		linkedList.append(c);
@@ -16,7 +16,7 @@ public class LinkedListTest {
 	}
 	@Test
 	public void givenLinkedListToInsertANumberAfterGivenValue_ShouldPassLinkedResult() {
-		LinkedList<Integer> linkedList = new LinkedList<Integer>();
+		SortedLinkedList<Integer> linkedList = new SortedLinkedList<Integer>();
 		Integer a = 56, b = 30, c = 70;
 		linkedList.append(a);
 		linkedList.append(c);
@@ -25,7 +25,7 @@ public class LinkedListTest {
 	}
 	@Test
 	public void givenLinkedListDeleteGivenNode_ShouldPassLinkedResult() {
-		LinkedList<Integer> linkedList = new LinkedList<Integer>();
+		SortedLinkedList<Integer> linkedList = new SortedLinkedList<Integer>();
 		Integer a = 56, b = 30, c = 70;
 		linkedList.append(a);
 		linkedList.append(c);

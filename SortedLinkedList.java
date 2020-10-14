@@ -1,10 +1,9 @@
 package com.bridgelabz.problemday13;
-
-public class LinkedList<T> {
+public class SortedLinkedList<T> {
 	Node<T> head;
 	Node<T> tail;
 
-	public LinkedList() {
+	public SortedLinkedList() {
 		this.head = null;
 		this.tail = null;
 	}
@@ -24,23 +23,6 @@ public class LinkedList<T> {
 			head = newNode;
 		}
 	}
-
-	/**
-	 * uc2
-	 * 
-	 * @param data
-	 */
-	public void add(T data) {
-		Node<T> newNode = new Node<T>(data);
-		if (head == null && tail == null) {
-			head = newNode;
-			tail = newNode;
-		} else {
-			newNode.setNext(head);
-			head = newNode;
-		}
-	}
-
 	/**
 	 * uc3
 	 * 
@@ -151,6 +133,46 @@ public class LinkedList<T> {
 		    prevNode.setNext(node.getNext());
 		    node.setNext(null);
 		}
+	}
+	/**
+	 * u2
+	 * uc10
+	 * @param data
+	 */
+	public void add(T data) {
+		Node<T> newNode=new Node<T>(data);
+		if(head==null && tail ==null) {
+			head=newNode;
+			tail=newNode;
+		}
+		else
+		{
+			Node<T> temp=null,prevNode=null;
+			temp=head;
+			while(temp!=null) {
+				if(sort(temp,newNode)>0) {
+					break;
+				}
+				prevNode=temp;
+				temp=temp.getNext();
+			}
+			if(temp==head) {
+				newNode.setNext(temp);
+				head=newNode;
+			}
+			else if(temp==null) {
+				prevNode.setNext(newNode);
+				tail=newNode;
+			}
+			else
+			{
+			prevNode.setNext(newNode);
+			newNode.setNext(temp);
+		    }
+	    }
+	}
+	private  int sort(Node<T> temp, Node<T> newNode) {
+		return ((Comparable) temp.getData()).compareTo(newNode.getData());
 	}
 	public void show() {
 		Node<T> node = head;
