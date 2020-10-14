@@ -1,13 +1,18 @@
 package com.bridgelabz.problemday13;
 
-public class MyLinkedList {
-	public static <T> void main(String[] args) {
+import org.junit.Assert;
+import org.junit.Test;
+
+public class LinkedListTest {
+
+	@Test
+	public void givenLinkedListWhenFindNodeOfGivenValue_ShouldReturnTrue() {
 		LinkedList<Integer> linkedList = new LinkedList<Integer>();
 		Integer a = 56, b = 30, c = 70;
 		linkedList.append(a);
 		linkedList.append(c);
 		linkedList.insertNumberAfterGivenNumber(b, a);
-		linkedList.show();
-		linkedList.findNodeWithValue(b);
+		Assert.assertEquals(true,linkedList.findNodeWithValue(b));
 	}
+
 }

@@ -97,6 +97,20 @@ public class LinkedList<T> {
 		node.setNext(null);
 		tail=node;
 	}
+	/**
+	 * uc7
+	 * @param value
+	 * @return
+	 */
+	public boolean findNodeWithValue(T value) {
+		Node<T> node=head;
+		while(node!=null) {
+			if(node.getData()==value)
+				return true;
+			node=node.getNext();
+		}
+		return false;
+	}
 	public void show() {
 		Node<T> node = head;
 		while (node != null) {
