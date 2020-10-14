@@ -1,4 +1,5 @@
 package com.bridgelabz.problemday13;
+
 public class LinkedList<T> {
 	Node<T> head;
 	Node<T> tail;
@@ -10,6 +11,7 @@ public class LinkedList<T> {
 
 	/**
 	 * uc1
+	 * 
 	 * @param data
 	 */
 	public void insert(T data) {
@@ -22,6 +24,23 @@ public class LinkedList<T> {
 			head = newnode;
 		}
 	}
+
+	/**
+	 * uc2
+	 * 
+	 * @param data
+	 */
+	public void add(T data) {
+		Node<T> newnode = new Node<T>(data);
+		if (head == null && tail == null) {
+			head = newnode;
+			tail = newnode;
+		} else {
+			newnode.setNext(head);
+			head = newnode;
+		}
+	}
+
 	public void show() {
 		Node<T> node = head;
 		while (node != null) {
