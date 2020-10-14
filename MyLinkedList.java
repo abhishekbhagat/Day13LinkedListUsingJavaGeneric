@@ -7,7 +7,7 @@ public class MyLinkedList {
 		linkedList.append(a);
 		linkedList.append(c);
 		linkedList.insertNumberAfterGivenNumber(b, a);
-		linkedList.pop();
+		linkedList.popLast();
 		linkedList.show();
 	}
 }

@@ -1,5 +1,4 @@
 package com.bridgelabz.problemday13;
-
 public class LinkedList<T> {
 	Node<T> head;
 	Node<T> tail;
@@ -86,7 +85,18 @@ public class LinkedList<T> {
 		head = node.getNext();
 		node.setNext(null);
 	}
-
+	/**
+	 * uc6
+	 * 
+	 */
+	public void popLast() {
+		Node<T> node=head;
+		while(node.getNext()!=tail) {
+			node=node.getNext();
+		}
+		node.setNext(null);
+		tail=node;
+	}
 	public void show() {
 		Node<T> node = head;
 		while (node != null) {
