@@ -56,6 +56,24 @@ public class LinkedList<T> {
 			tail = newNode;
 		}
 	}
+	/**
+	 * uc4
+	 * @param newKey
+	 * @param key
+	 */
+	public void insertNumberAfterGivenNumber(T newKey,T key) {
+		Node<T> node=head;
+		Node<T> temp;
+		Node<T> newnode=new Node<T>(newKey);
+		while(node!=null) {
+			if(node.getData()==key)
+			  break;
+	      node=node.getNext();				
+		}
+		temp=node.getNext();
+		node.setNext(newnode);
+		newnode.setNext(temp);	
+	}
 
 	public void show() {
 		Node<T> node = head;
